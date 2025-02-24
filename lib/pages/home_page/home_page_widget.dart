@@ -57,25 +57,6 @@ class _HomePageWidgetState extends State<HomePageWidget> {
       child: Scaffold(
         key: scaffoldKey,
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
-<<<<<<< HEAD
-=======
-        appBar: AppBar(
-          backgroundColor: FlutterFlowTheme.of(context).primary,
-          automaticallyImplyLeading: false,
-          title: Text(
-            'Page Title',
-            style: FlutterFlowTheme.of(context).headlineMedium.override(
-                  fontFamily: 'Poppins',
-                  color: Colors.white,
-                  fontSize: 22.0,
-                  letterSpacing: 0.0,
-                ),
-          ),
-          actions: [],
-          centerTitle: false,
-          elevation: 2.0,
-        ),
->>>>>>> 8b0b979d157a3980701e17baa83c233fde075afe
         body: SafeArea(
           top: true,
           child: Padding(
@@ -119,12 +100,12 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                     onIcon: Icon(
                       Icons.keyboard_arrow_down_outlined,
                       color: FlutterFlowTheme.of(context).secondaryText,
-                      size: 24.0,
+                      size: 20.0,
                     ),
                     offIcon: Icon(
                       Icons.keyboard_arrow_up,
                       color: FlutterFlowTheme.of(context).primary,
-                      size: 24.0,
+                      size: 20.0,
                     ),
                   ),
                 ),

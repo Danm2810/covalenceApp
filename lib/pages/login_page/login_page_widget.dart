@@ -1,15 +1,7 @@
-<<<<<<< HEAD
-=======
-import '/auth/custom_auth/auth_util.dart';
->>>>>>> 8b0b979d157a3980701e17baa83c233fde075afe
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/flutter_flow/flutter_flow_widgets.dart';
 import 'dart:ui';
-<<<<<<< HEAD
-=======
-import 'package:easy_debounce/easy_debounce.dart';
->>>>>>> 8b0b979d157a3980701e17baa83c233fde075afe
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -17,10 +9,7 @@ import 'package:provider/provider.dart';
 import 'login_page_model.dart';
 export 'login_page_model.dart';
 
-<<<<<<< HEAD
 /// Entry Login Page
-=======
->>>>>>> 8b0b979d157a3980701e17baa83c233fde075afe
 class LoginPageWidget extends StatefulWidget {
   const LoginPageWidget({super.key});
 
@@ -101,11 +90,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                 child: ClipRRect(
                                   borderRadius: BorderRadius.circular(10.0),
                                   child: Image.asset(
-<<<<<<< HEAD
                                     'assets/images/iphlogo.png',
-=======
-                                    'assets/images/images.png',
->>>>>>> 8b0b979d157a3980701e17baa83c233fde075afe
                                     width: MediaQuery.sizeOf(context).width *
                                         0.785,
                                     height: 70.0,
@@ -124,13 +109,8 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                             style: FlutterFlowTheme.of(context)
                                 .displaySmall
                                 .override(
-<<<<<<< HEAD
                                   fontFamily: 'Poppins',
                                   color: Color(0xFF716868),
-=======
-                                  fontFamily: 'Plus Jakarta Sans',
-                                  color: Color(0xFF101213),
->>>>>>> 8b0b979d157a3980701e17baa83c233fde075afe
                                   fontSize: 17.0,
                                   letterSpacing: 0.0,
                                   fontWeight: FontWeight.w600,
@@ -153,14 +133,6 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                     child: TextFormField(
                                       controller: _model.usernameTextController,
                                       focusNode: _model.usernameFocusNode,
-<<<<<<< HEAD
-=======
-                                      onChanged: (_) => EasyDebounce.debounce(
-                                        '_model.usernameTextController',
-                                        Duration(milliseconds: 2000),
-                                        () async {},
-                                      ),
->>>>>>> 8b0b979d157a3980701e17baa83c233fde075afe
                                       autofocus: true,
                                       autofillHints: [AutofillHints.username],
                                       obscureText: false,
@@ -213,11 +185,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
-<<<<<<< HEAD
                                             fontFamily: 'Poppins',
-=======
-                                            fontFamily: 'Plus Jakarta Sans',
->>>>>>> 8b0b979d157a3980701e17baa83c233fde075afe
                                             color: Color(0xFF101213),
                                             fontSize: 14.0,
                                             letterSpacing: 0.0,
@@ -237,10 +205,6 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                     child: TextFormField(
                                       controller: _model.passwordTextController,
                                       focusNode: _model.passwordFocusNode,
-<<<<<<< HEAD
-=======
-                                      onFieldSubmitted: (_) async {},
->>>>>>> 8b0b979d157a3980701e17baa83c233fde075afe
                                       autofocus: true,
                                       autofillHints: [AutofillHints.password],
                                       obscureText: !_model.passwordVisibility,
@@ -308,11 +272,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                       style: FlutterFlowTheme.of(context)
                                           .bodyMedium
                                           .override(
-<<<<<<< HEAD
                                             fontFamily: 'Poppins',
-=======
-                                            fontFamily: 'Plus Jakarta Sans',
->>>>>>> 8b0b979d157a3980701e17baa83c233fde075afe
                                             color: Color(0xFF101213),
                                             fontSize: 14.0,
                                             letterSpacing: 0.0,
@@ -328,30 +288,8 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                   padding: EdgeInsetsDirectional.fromSTEB(
                                       0.0, 0.0, 0.0, 16.0),
                                   child: FFButtonWidget(
-<<<<<<< HEAD
                                     onPressed: () {
                                       print('Button pressed ...');
-=======
-                                    onPressed: () async {
-                                      GoRouter.of(context).prepareAuthEvent();
-
-                                      final user =
-                                          await authManager.signInWithEmail(
-                                        context,
-                                        _model.usernameTextController.text,
-                                        _model.passwordTextController.text,
-                                      );
-                                      if (user == null) {
-                                        return;
-                                      }
-
-                                      if (currentAuthenticationToken == null ||
-                                          currentAuthenticationToken == '') {
-                                        context.pushNamed('null');
-                                      } else {
-                                        context.pushNamed('null');
-                                      }
->>>>>>> 8b0b979d157a3980701e17baa83c233fde075afe
                                     },
                                     text: 'Log in',
                                     options: FFButtonOptions(
@@ -362,20 +300,12 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                       iconPadding:
                                           EdgeInsetsDirectional.fromSTEB(
                                               0.0, 0.0, 0.0, 0.0),
-<<<<<<< HEAD
                                       color:
                                           FlutterFlowTheme.of(context).primary,
                                       textStyle: FlutterFlowTheme.of(context)
                                           .titleSmall
                                           .override(
                                             fontFamily: 'Poppins',
-=======
-                                      color: Color(0xBA04813E),
-                                      textStyle: FlutterFlowTheme.of(context)
-                                          .titleSmall
-                                          .override(
-                                            fontFamily: 'Plus Jakarta Sans',
->>>>>>> 8b0b979d157a3980701e17baa83c233fde075afe
                                             color: Colors.white,
                                             fontSize: 16.0,
                                             letterSpacing: 0.0,
@@ -410,11 +340,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                           style: FlutterFlowTheme.of(context)
                                               .bodyMedium
                                               .override(
-<<<<<<< HEAD
                                                 fontFamily: 'Poppins',
-=======
-                                                fontFamily: 'Plus Jakarta Sans',
->>>>>>> 8b0b979d157a3980701e17baa83c233fde075afe
                                                 color: Color(0xFF101213),
                                                 fontSize: 14.0,
                                                 letterSpacing: 0.0,
@@ -437,11 +363,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                             hoverColor: Colors.transparent,
                                             highlightColor: Colors.transparent,
                                             onTap: () async {
-<<<<<<< HEAD
                                               context.pushNamed('HomePage');
-=======
-                                              context.pushNamed('null');
->>>>>>> 8b0b979d157a3980701e17baa83c233fde075afe
                                             },
                                             child: RichText(
                                               textScaler: MediaQuery.of(context)
@@ -456,14 +378,9 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                                         .override(
                                                           fontFamily:
                                                               'Plus Jakarta Sans',
-<<<<<<< HEAD
                                                           color: FlutterFlowTheme
                                                                   .of(context)
                                                               .primary,
-=======
-                                                          color:
-                                                              Color(0xBA04813E),
->>>>>>> 8b0b979d157a3980701e17baa83c233fde075afe
                                                           fontSize: 14.0,
                                                           letterSpacing: 0.0,
                                                           fontWeight:
@@ -476,11 +393,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                                         TapGestureRecognizer()
                                                           ..onTap = () async {
                                                             context.pushNamed(
-<<<<<<< HEAD
                                                                 'HomePage');
-=======
-                                                                'null');
->>>>>>> 8b0b979d157a3980701e17baa83c233fde075afe
                                                           },
                                                   )
                                                 ],
@@ -488,12 +401,7 @@ class _LoginPageWidgetState extends State<LoginPageWidget> {
                                                     FlutterFlowTheme.of(context)
                                                         .bodyMedium
                                                         .override(
-<<<<<<< HEAD
                                                           fontFamily: 'Poppins',
-=======
-                                                          fontFamily:
-                                                              'Plus Jakarta Sans',
->>>>>>> 8b0b979d157a3980701e17baa83c233fde075afe
                                                           color:
                                                               Color(0xFF101213),
                                                           fontSize: 14.0,

@@ -5,6 +5,8 @@ import 'package:go_router/go_router.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
 
+import '/backend/schema/enums/enums.dart';
+
 import '/index.dart';
 import '/main.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
@@ -62,7 +64,6 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
                 ),
         ),
         FFRoute(
-<<<<<<< HEAD
           name: 'Widgets',
           path: '/widgets',
           builder: (context, params) => params.isEmpty
@@ -71,11 +72,13 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
                   initialPage: 'Widgets',
                   page: WidgetsWidget(),
                 ),
-=======
-          name: 'loginPage',
-          path: '/loginPage',
-          builder: (context, params) => LoginPageWidget(),
->>>>>>> 8b0b979d157a3980701e17baa83c233fde075afe
+        ),
+        FFRoute(
+          name: 'CalendarPage',
+          path: '/calendarPage',
+          builder: (context, params) => params.isEmpty
+              ? NavBarPage(initialPage: 'CalendarPage')
+              : CalendarPageWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );

@@ -99,6 +99,7 @@ class _NavBarPageState extends State<NavBarPage> {
     final tabs = {
       'HomePage': HomePageWidget(),
       'Widgets': WidgetsWidget(),
+      'CalendarPage': CalendarPageWidget(),
     };
     final currentIndex = tabs.keys.toList().indexOf(_currentPageName);
 
@@ -129,6 +130,18 @@ class _NavBarPageState extends State<NavBarPage> {
             icon: Icon(
               Icons.medical_services,
               size: 24.0,
+            ),
+            label: 'Home',
+            tooltip: '',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.date_range_outlined,
+              size: 24.0,
+            ),
+            activeIcon: Icon(
+              Icons.date_range_rounded,
+              size: 32.0,
             ),
             label: 'Home',
             tooltip: '',

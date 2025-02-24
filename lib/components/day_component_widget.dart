@@ -106,15 +106,16 @@ class _DayComponentWidgetState extends State<DayComponentWidget> {
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Container(
-                        width: 7.0,
-                        height: 7.0,
-                        decoration: BoxDecoration(
-                          color: FlutterFlowTheme.of(context).error,
-                          shape: BoxShape.circle,
+                      if (false)
+                        Container(
+                          width: 7.0,
+                          height: 7.0,
+                          decoration: BoxDecoration(
+                            color: FlutterFlowTheme.of(context).error,
+                            shape: BoxShape.circle,
+                          ),
+                          alignment: AlignmentDirectional(0.0, 0.0),
                         ),
-                        alignment: AlignmentDirectional(0.0, 0.0),
-                      ),
                     ],
                   ),
                 ],

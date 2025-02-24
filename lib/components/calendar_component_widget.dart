@@ -153,7 +153,7 @@ class _CalendarComponentWidgetState extends State<CalendarComponentWidget> {
           child: Builder(
             builder: (context) {
               final dayComponent =
-                  widget!.displayDates!.toList().take(35).toList();
+                  widget!.displayDates!.toList().take(42).toList();
 
               return GridView.builder(
                 padding: EdgeInsets.zero,
