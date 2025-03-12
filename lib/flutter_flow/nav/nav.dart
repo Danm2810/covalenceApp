@@ -79,6 +79,11 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
           builder: (context, params) => params.isEmpty
               ? NavBarPage(initialPage: 'CalendarPage')
               : CalendarPageWidget(),
+        ),
+        FFRoute(
+          name: 'loginPageCopy',
+          path: '/loginPageCopy',
+          builder: (context, params) => LoginPageCopyWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
