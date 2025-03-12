@@ -9,6 +9,7 @@ import 'package:provider/provider.dart';
 import 'calendar_component_model.dart';
 export 'calendar_component_model.dart';
 
+/// Displays the dates given by generating DayComponents in a grid view
 class CalendarComponentWidget extends StatefulWidget {
   const CalendarComponentWidget({
     super.key,

@@ -10,12 +10,14 @@ import 'package:flutter/material.dart';
 
 import 'package:dart_date/dart_date.dart';
 
+// Gets the dates to display on home page based on whether isWeek is toggled
 Future<List<DateTime>> getDates(bool? isWeek) async {
   List<DateTime> dates;
   DateTime today = DateTime.now();
   if (isWeek != null) {
     if (isWeek) {
       DateTime startOfWeek = today.startOfWeek;
+      // returns the seven days of the current week
       return List.generate(
           7, (index) => startOfWeek.add(Duration(days: index)));
     } else {
@@ -24,6 +26,7 @@ Future<List<DateTime>> getDates(bool? isWeek) async {
           startOfMonth.subtract(Duration(days: startOfMonth.weekday % 7));
       int daysInMonth = today.endOfMonth.day; // Get last day of the month
       int totalDaysToShow = daysInMonth + startOfMonth.weekday % 7;
+      // returns the days in the current month
       return List.generate(
           totalDaysToShow, (index) => startDate.addDays(index));
     }

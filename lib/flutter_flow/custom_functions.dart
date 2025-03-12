@@ -11,18 +11,21 @@ import 'uploaded_file.dart';
 import '/backend/schema/enums/enums.dart';
 
 DateTime? getFirstOfMonth() {
+  // Gets the first date of the current month
   return DateTime.now()
       .toUtc()
       .subtract(Duration(days: DateTime.now().day - 1));
 }
 
 DateTime? getNextMonth(DateTime? currMonth) {
+  // Gets the first date of the next month
   if (currMonth != null) {
     return DateTime(currMonth.year, currMonth.month + 1, currMonth.day);
   }
 }
 
 DateTime? getPrevMonth(DateTime? currMonth) {
+  // Gets the first date of the previous month
   if (currMonth != null) {
     return DateTime(currMonth.year, currMonth.month - 1, currMonth.day);
   }

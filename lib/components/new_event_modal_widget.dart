@@ -12,6 +12,7 @@ import 'package:provider/provider.dart';
 import 'new_event_modal_model.dart';
 export 'new_event_modal_model.dart';
 
+/// Modal that allows user to input a new event onto their calendar
 class NewEventModalWidget extends StatefulWidget {
   const NewEventModalWidget({super.key});
 

@@ -16,6 +16,7 @@ import 'package:provider/provider.dart';
 import 'calendar_page_model.dart';
 export 'calendar_page_model.dart';
 
+/// Page to display a user's calendar with their custom events
 class CalendarPageWidget extends StatefulWidget {
   const CalendarPageWidget({super.key});
 
@@ -95,6 +96,7 @@ class _CalendarPageWidgetState extends State<CalendarPageWidget> {
                     child: Column(
                       mainAxisSize: MainAxisSize.max,
                       children: [
+                        // Shows the month and year on display in the calendar below. Arrows allow user to view the previous or next months
                         Row(
                           mainAxisSize: MainAxisSize.max,
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -175,6 +177,8 @@ class _CalendarPageWidgetState extends State<CalendarPageWidget> {
                             ),
                           ],
                         ),
+
+                        // CalendarComponent displays the dates in the month indicated
                         Expanded(
                           child: wrapWithModel(
                             model: _model.calendarComponentModel,
@@ -393,6 +397,8 @@ class _CalendarPageWidgetState extends State<CalendarPageWidget> {
                   ),
                 ),
               ),
+
+              // Button opens up the NewEventModal for users to input a new event to their calendar.
               Align(
                 alignment: AlignmentDirectional(0.0, 1.0),
                 child: Builder(

@@ -13,6 +13,7 @@ import 'package:provider/provider.dart';
 import 'home_page_model.dart';
 export 'home_page_model.dart';
 
+/// Home page with most commonly used widgets
 class HomePageWidget extends StatefulWidget {
   const HomePageWidget({super.key});
 
@@ -73,7 +74,9 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                   duration: Duration(milliseconds: 200),
                   curve: Curves.linear,
                   height: _model.isWeek ? 60.0 : 200.0,
-                  child: wrapWithModel(
+                  child:
+                      // Calendar Component goes between Week mode and Month mode based on the toggle
+                      wrapWithModel(
                     model: _model.calendarComponentModel,
                     updateCallback: () => safeSetState(() {}),
                     child: CalendarComponentWidget(

@@ -10,6 +10,7 @@ import 'package:flutter/material.dart';
 
 import 'package:dart_date/dart_date.dart';
 
+// Gets the dates to display on the calendar page based on the month currently on display
 Future<List<DateTime>> getMonthDates(DateTime? firstOfMonth) async {
   List<DateTime> allDates = [];
   if (firstOfMonth != null) {
@@ -17,6 +18,7 @@ Future<List<DateTime>> getMonthDates(DateTime? firstOfMonth) async {
         firstOfMonth.subtract(Duration(days: firstOfMonth.weekday % 7));
     DateTime endDate = firstOfMonth.endOfMonth
         .add(Duration(days: 6 - firstOfMonth.endOfMonth.weekday % 7));
+    // returns the dates from the first sunday to the last saturday
     for (DateTime day = startDate;
         !day.isAfter(endDate);
         day = day.add(Duration(days: 1))) {

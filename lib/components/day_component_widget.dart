@@ -7,6 +7,7 @@ import 'package:provider/provider.dart';
 import 'day_component_model.dart';
 export 'day_component_model.dart';
 
+/// Displays a single date
 class DayComponentWidget extends StatefulWidget {
   const DayComponentWidget({
     super.key,

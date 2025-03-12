@@ -7,6 +7,7 @@ import 'package:provider/provider.dart';
 import 'top_bar_model.dart';
 export 'top_bar_model.dart';
 
+/// Top navigation bar that is displayed on every page
 class TopBarWidget extends StatefulWidget {
   const TopBarWidget({super.key});
 
