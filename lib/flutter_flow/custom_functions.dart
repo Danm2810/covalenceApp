@@ -8,7 +8,10 @@ import 'package:timeago/timeago.dart' as timeago;
 import 'lat_lng.dart';
 import 'place.dart';
 import 'uploaded_file.dart';
+import '/backend/schema/structs/index.dart';
 import '/backend/schema/enums/enums.dart';
+import '/backend/supabase/supabase.dart';
+import '/auth/custom_auth/auth_util.dart';
 
 DateTime? getFirstOfMonth() {
   // Gets the first date of the current month
