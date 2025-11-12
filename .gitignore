@@ -48,3 +48,24 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+# Windows build files
+/windows/flutter/
+windows/runner/
+windows/x64/
+windows/arm64/
+windows/CMakeFiles/
+windows/flutter/ephemeral/
+windows/flutter/generated_plugin_registrant.cc
+windows/flutter/generated_plugin_registrant.h
+windows/flutter/generated_plugins.cmake
+windows/flutter/Generated.xcconfig
+windows/flutter/Generated.props
+windows/flutter/GeneratedFiles/
+windows/CMakeCache.txt
+windows/Runner.exe.manifest
+windows/Runner.rc
+# Ignore all Windows build artifacts
+/windows/**
+# But keep top-level project config files if needed
+!/windows/CMakeLists.txt
